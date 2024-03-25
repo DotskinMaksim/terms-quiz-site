@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#randomSonad {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#kontroll {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#vastus {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+input[type="button"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarkvara sõnad</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Tarkvara sõnad</h1>
+<input type="button" value="Juhuslik sõna" onclick="randomSona()">
+
+<br>
+<br>
+<div id="randomSonad"></div>
+<input type="hidden" id="hiddenInput">
+<label for="kontroll">Kirjuta sõna vene keeles</label>
+<input type="text" id="kontroll" oninput="kontroll()">
+<div id="vastus"></div>
+</body>
+</html>
