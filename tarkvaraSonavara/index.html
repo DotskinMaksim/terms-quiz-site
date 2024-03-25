@@ -3,8 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <title>Tarkvara sõnad</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script>
+        const sonadEestiKeeles=[
+            //esimese masiivi loomine
+            'teostus',
+            'algoritm',
+            'kavand',
+            'kasutajaliides',
+            'mudel',
+            'andmebaasi skeem',
+            'standart',
+            'tsükel',
+            'andmetöötlus',
+            'andmestruktuur',
+            'arenduskeskond',
+            'projektihaldus tööriist',
+            'kavandamine',
+            'iteratsioon',
+            'parandus',
+            'koskmudel',
+            'agiiline mudel',
+            'spiraalne mudel',
+            'inkrementaalne mudel',
+            'nõudmised',
+            'realiseerimine',
+            'integreerimine',
+            'kasutamine',
+            'hooldus',
+            'eelised',
+            'puudused',
+            'elutsükkel',
+            'arendamine',
+            'valideerimine'
+
+
+
+
+        ];
+        const sonadVeneKeeles=[
+            //teise masiivi loomine
+            'реализация',
+            'алгоритм',
+            'план',
+            'пользовательский интерфейс',
+            'модель',
+            'схема базы данных',
+            'стандарт',
+            'цикл',
+            'обработка данных',
+            'структура данных',
+            'среда разработки',
+            'инструмент управления проектом',
+            'планирование',
+            'итерация',
+            'исправление',
+            'каскадная модель',
+            'гибкая модель',
+            'спиральная модель',
+            'инкрементальная модель',
+            'требования',
+            'реализация',
+            'интеграция',
+            'использование',
+            'обслуживание',
+            'преимущества',
+            'недостатки',
+            'жизненный цикл',
+            'разработка',
+            'Проверка'
+        ];
+
+
+        function randomSona(){
+            // metood võta juhuslik sõna eesti keelse masiivist
+            const randId = Math.floor(Math.random() * sonadEestiKeeles.length);
+            const sona = sonadEestiKeeles[randId];
+            document.getElementById('randomSonad').innerHTML = sona;
+            document.getElementById('hiddenInput').value = randId;
+        }
+        function randomSona2(){
+            // metood võta juhuslik sõna aga vene keelse masiviist
+            const randId = Math.floor(Math.random() * sonadVeneKeeles.length);
+            const sona = sonadVeneKeeles[randId];
+            document.getElementById('randomSonad2').innerHTML = sona;
+            document.getElementById('hiddenInput2').value = randId;
+        }
+
+
+        function kontroll(){
+            //metood mis kontrollib vastus
+            const randId = document.getElementById('hiddenInput').value; //võtame sõna masiivis id
+            const vastus = document.getElementById('kontroll').value.toLowerCase();; // võtame kasutaja vastust
+
+
+            // kui vastus on vene keelse masiivis
+
+            if (vastus === sonadVeneKeeles[randId]){
+                document.getElementById('vastus').innerHTML = "<span style=\"color: green;\">Õige!</span>";//siis koreektne
+            } else {
+                document.getElementById('vastus').innerHTML = "<span style=\"color: red;\">Vale!</span>";// kui vastupidi siis ebakoreektne
+            }
+        }
+        function kontroll2(){
+            //metood mis kontrollib vastus
+            const randId = document.getElementById('hiddenInput2').value; //võtame sõna masiivis id
+            const vastus = document.getElementById('kontroll2').value.toLowerCase();;// võtame kasutaja vastust
+
+            // kui vastus on eesti keelse masiivis
+            if (vastus === sonadEestiKeeles[randId]){
+                document.getElementById('vastus2').innerHTML = "<span style=\"color: green;\">Правильно!</span>"; //siis koreektne
+                // kui vastupidi siis ebakoreektne
+            } else {
+                document.getElementById('vastus2').innerHTML = "<span style=\"color: red;\">Не правильно!</span>";
+            }
+        }
+
+    </script>
+    <style>
+
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .randomSonad {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .kontroll {
+            display: block;
+            margin: 0 auto;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .vastus {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        input[type="button"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <h1>Tarkvara sõnad</h1>
@@ -46,15 +238,10 @@
                     <div id="vastus2" class="vastus"></div>
                     <input type="button" value="Случайное слово" onclick="randomSona2()">
 
-
             </td>
         </tr>
 
     </tbody>
 </table>
-
-
-
-
 </body>
 </html>
