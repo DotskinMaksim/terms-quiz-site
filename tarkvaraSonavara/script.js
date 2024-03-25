@@ -1,4 +1,5 @@
 const sonadEestiKeeles=[
+    //esimese masiivi loomine
     'teostus',
     'algoritm',
     'kavand',
@@ -13,9 +14,28 @@ const sonadEestiKeeles=[
     'projektihaldus tööriist',
     'kavandamine',
     'iteratsioon',
-    'parandus'
+    'parandus',
+    'koskmudel',
+    'agiiline mudel',
+    'spiraalne mudel',
+    'inkrementaalne mudel',
+    'nõudmised',
+    'realiseerimine',
+    'integreerimine',
+    'kasutamine',
+    'hooldus',
+    'eelised',
+    'puudused',
+    'elutsükkel',
+    'arendamine',
+    'valideerimine'
+
+
+
+
 ];
 const sonadVeneKeeles=[
+    //teise masiivi loomine
     'реализация',
     'алгоритм',
     'план',
@@ -30,10 +50,26 @@ const sonadVeneKeeles=[
     'инструмент управления проектом',
     'планирование',
     'итерация',
-    'исправление'
+    'исправление',
+    'каскадная модель',
+    'гибкая модель',
+    'спиральная модель',
+    'инкрементальная модель',
+    'требования',
+    'реализация',
+    'интеграция',
+    'использование',
+    'обслуживание',
+    'преимущества',
+    'недостатки',
+    'жизненный цикл',
+    'разработка',
+    'Проверка'
 ];
 
+
 function randomSona(){
+    // metood võta juhuslik sõna
     const randId = Math.floor(Math.random() * sonadEestiKeeles.length);
     const sona = sonadEestiKeeles[randId];
     document.getElementById('randomSonad').innerHTML = sona;
@@ -41,6 +77,7 @@ function randomSona(){
 }
 
 function kontroll(){
+    //metood mis kontrollib vastus
     const randId = document.getElementById('hiddenInput').value;
     const vastus = document.getElementById('kontroll').value.toLowerCase();;
 
