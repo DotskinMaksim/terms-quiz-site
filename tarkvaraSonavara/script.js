@@ -13,7 +13,25 @@ const sonadEestiKeeles=[
     'projektihaldus tööriist',
     'kavandamine',
     'iteratsioon',
-    'parandus'
+    'parandus',
+    'koskmudel',
+    'agiiline mudel',
+    'spiraalne mudel',
+    'inkrementaalne mudel',
+    'nõudmised',
+    'realiseerimine',
+    'integreerimine',
+    'kasutamine',
+    'hooldus',
+    'eelised',
+    'puudused',
+    'elutsükkel',
+    'arendamine',
+    'valideerimine'
+
+
+
+
 ];
 const sonadVeneKeeles=[
     'реализация',
@@ -30,8 +48,23 @@ const sonadVeneKeeles=[
     'инструмент управления проектом',
     'планирование',
     'итерация',
-    'исправление'
+    'исправление',
+    'каскадная модель',
+    'гибкая модель',
+    'спиральная модель',
+    'инкрементальная модель',
+    'требования',
+    'реализация',
+    'интеграция',
+    'использование',
+    'обслуживание',
+    'преимущества',
+    'недостатки',
+    'жизненный цикл',
+    'разработка',
+    'Проверка'
 ];
+
 
 function randomSona(){
     const randId = Math.floor(Math.random() * sonadEestiKeeles.length);
