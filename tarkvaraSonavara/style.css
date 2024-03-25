@@ -1,3 +1,38 @@
+
+
+input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,20 +43,20 @@ h1 {
     text-align: center;
 }
 
-#randomSonad {
+.randomSonad {
     text-align: center;
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-#kontroll {
+.kontroll {
     display: block;
     margin: 0 auto;
     padding: 5px;
     font-size: 16px;
 }
 
-#vastus {
+.vastus {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
@@ -38,14 +73,4 @@ input[type="button"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-input[type="button"]:hover {
-    background-color: #0056b3;
-}
-
-label {
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
 }

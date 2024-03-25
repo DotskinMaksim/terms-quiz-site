@@ -8,14 +8,52 @@
 </head>
 <body>
 <h1>Tarkvara sõnad</h1>
-<input type="button" value="Juhuslik sõna" onclick="randomSona()">
 
-<br>
-<br>
-<div id="randomSonad"></div>
-<input type="hidden" id="hiddenInput">
-<label for="kontroll">Kirjuta sõna vene keeles</label>
-<input type="text" id="kontroll" oninput="kontroll()">
-<div id="vastus"></div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Eesti-Vene</th>
+            <th>Русско-Эстонский</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                    <div id="randomSonad" class="randomSonad"></div>
+                    <!-- salvestame sõna hiden inputtis -->
+                    <input type="hidden" id="hiddenInput">
+                    <!-- input vastusele-->
+                    <label for="kontroll">Kirjuta sõna vene keeles</label>
+                    <!-- kontroll nupp-->
+                    <input type="text" id="kontroll" oninput="kontroll()" class="kontroll">
+                    <!-- vastuse konteiner-->
+                    <div id="vastus" class="vastus"></div>
+                    <input type="button" value="Juhuslik sõna" onclick="randomSona()">
+
+
+            </td>
+            <td>
+
+                    <div id="randomSonad2" class="randomSonad"></div>
+                    <!-- salvestame sõna hiden inputtis -->
+                    <input type="hidden" id="hiddenInput2">
+                    <!-- input vastusele-->
+                    <label for="kontroll">Напиши слово на Эстонском</label>
+                    <!-- kontroll nupp-->
+                    <input type="text" id="kontroll2" oninput="kontroll2()" class="kontroll">
+                    <!-- vastuse konteiner-->
+                    <div id="vastus2" class="vastus"></div>
+                    <input type="button" value="Случайное слово" onclick="randomSona2()">
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
 </body>
 </html>
